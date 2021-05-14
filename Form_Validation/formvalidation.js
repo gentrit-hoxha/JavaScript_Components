@@ -28,6 +28,9 @@ function checkInput() {
 		setSuccessFor(name, "Ne Rregull");
     }
      
+
+
+    
 }
 
 function checkSurname() {
