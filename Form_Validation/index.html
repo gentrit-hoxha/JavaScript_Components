@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Testing JavaScript</title>
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+         <form action="file1.php" id="form">
+
+
+            <div class="container mt-4">
+                <h2>Form Validation with JavaScript</h2>
+    
+                 <div class="row">
+                     <div class="col-sm">
+                        <div class="form-group">
+                            <label for="nameField"> Enter your name</label>
+                            <input type="text" class="form-control" id="nameField" >      
+                             <small class="form-text text-muted" id="nameMsg"></small>
+                            </div>
+                     </div>
+    
+                     <div class="col-sm">
+                        <div class="form-group">
+                            <label for="surnameField"> Enter your Surname</label>
+                            <input type="text" class="form-control" id="surnameField" >
+                        </div>
+                     </div>
+                 </div>
+    
+                 <div class="form-group">
+                     <label for="">Enter your email</label>
+                     <input type="email" name="email" id="emailField" class="form-control" >
+                 </div>
+    
+                 <div class="form-group">
+                     <input style="width: 50%;"  type="submit" value="SUBMIT" class="form-control btn btn-info" id="button">
+                 </div>
+             </div>
+
+
+         </form>
+
+    <script src="formvalidation.js"></script>
+</body>
+</html>
