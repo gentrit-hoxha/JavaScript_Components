@@ -1,11 +1,21 @@
 
 
+input:focus{
+    outline: none;
+    background-color: #FFFFFF !important;
+}
+
+.form-control:focus{
+    color: black;
+}
 .errorMsg{
+
   color: #e74c3c !important;
 }
 
 .succesMsg{
-    color: #e74c3c !important;
+  
+    color: #2ecc71 !important;
 }
 
 .yes{

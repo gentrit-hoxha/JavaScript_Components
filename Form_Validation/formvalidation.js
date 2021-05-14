@@ -10,6 +10,8 @@ form.addEventListener('submit', (e) =>{
      e.preventDefault();
 
       checkInput();
+      checkSurname();
+      checkMail();
 });
 
 
@@ -17,114 +19,106 @@ function checkInput() {
     const nameValue = name.value;
  
     if(nameValue === '') {
-		setErrorFor(name,  "Emri eshte i zbrazet");
-	} else if (nameValue) {
-		setSuccessFor(name, "");
-	}
-}
-
-
-
-function setErrorFor(input, message) {
-	const formControl = input;
-    formControl.className = 'form-control error';
-    
-    
-	const small = document.getElementById('nameMsg');
-    small.innerText = message;
-    small.className = 'errorMsg no';
-}
-
-function setSuccessFor(input,message) {
-	const formControl = input;
-    formControl.className = 'form-control success';
-    
-
-    let small = document.getElementById('nameMsg');
-    small.innerText = message;
-    small.className = 'yes';
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function show() {
-    var name = document.getElementById("nameField").value;
-    var surname = document.getElementById("surnameField").value;
-
-   if (!(name=="")  ) {
-       let msg  = document.getElementById("nameMsg");
-       msg.innerHTML = "The name is correct"; 
-
+		setErrorFor(name, "Shenoni Emrin, nuk mund te lihet zbrazet");
+    } 
+     else if(nameValue.length>5){
+           setErrorFor(name, "Nuk duhet te jete gjatesia me e madhe se 5");
+     }
+    else if (nameValue) {
+		setSuccessFor(name, "Ne Rregull");
     }
-
-    else{
-        let msg2  = document.getElementById("nameMsg2");
-         msg2.innerHTML = "The name is incorrect";
-    }
-
-    if (!(surname=="")) {
-        let surMsg = document.getElementById("surMsg1");
-       surMsg.innerHTML = "The surname is correct"; 
-
      
-    } else if(surname == "") {
-        let surMsg = document.getElementById("surMsg2");
-        surMsg.innerHTML = "The surname is incorrect"; 
-
-    }
-
-
-  
 }
 
-document.getElementById("button").addEventListener("click" , show);
+function checkSurname() {
+    const surnameValue = surname.value;
+    if(surnameValue === '') {
+		setErrorFor(surname, "Plotesoni fushen e mbiemrit");
+	} else if (surnameValue) {
+		setSuccessFor(surname, "Në Rregull");
+    }
+}
+
+
+function checkMail() {
+    const emailValue = email.value;
+    if(emailValue === '') {
+		setErrorFor(email, "Shenoni emailin ne menyre korrekte, e.g username@domain.com");
+    } 
+    else if (emailValue) {
+		setSuccessFor(email,"Në Rregull");
+    }
+}
+
+
+  function setErrorFor(input, message) {
+            var formControl = input;
+            formControl.className = 'form-control error';
+
+            var small = formControl.nextElementSibling;
+            small.innerText = message;
+            small.className = 'errorMsg no';
+        }
+
+
+
+     function setSuccessFor(input, message) {
+            const formControl = input;
+            formControl.className = 'form-control success';
+
+            var small = formControl.nextElementSibling;
+            small.innerText = message;
+            small.className = 'succesMsg no';
+        }
 
 
 
 
-console.log();*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
