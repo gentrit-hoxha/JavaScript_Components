@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        *{
+
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .header{
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #F5F5F5 ;
+           
+        }
+        .logo{
+            padding: 10px;
+        }
+
+        .links{
+            padding: 10px;
+        }
+
+        ul li{
+            list-style-type: none;
+            display: inline;
+        }
+
+
+         .content1{
+             background-color: #80BBDF;
+         }
+        .section1{
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 80px 60px;
+        }
+
+       .sec1text p {
+           max-width: 350px;
+           font-size: 20px;
+           font-family: 'Quicksand';
+           font-weight: 600;
+       }
+
+       .sec1text button{
+           margin: 15px 0px 15px 0px;
+           padding: 10px 10px 10px 10px;
+           border-style: none;
+           background-color: #3677EE;
+           color: white;
+           font-size: 14px;
+       }
+        
+    
+
+
+
+
+        .section1 h1{
+            padding-bottom: 25px;
+            font-size: 50px;
+            letter-spacing: -1px;
+        }
+
+        .sec1content{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+        }
+
+        @media only screen and (max-width: 850px) {
+               .sec1content{
+                   flex-direction: column;
+               }
+
+              .section1{
+                  padding: 25px;
+              }              
+
+              .dropBoxImage{
+                margin-top: 10px;
+                max-width: 600px;
+                width: 100%;
+                height: auto;
+
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              } 
+
+               
+               .sec1img{
+                width: 100%;
+               }
+            
+
+        }
+
+
+
+
+        
+
+
+
+
+
+        
+    </style>
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <h1>THE LOGO</h1>
+            </div>
+
+            <div class="links">
+                <nav>
+                    <ul>
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content1">
+            <div class="section1">
+       
+                <div class="sec1title">
+                    <h1>Everything you need for work, all in one place</h1>
+                </div>
+    
+                <div class="sec1content">
+                    <div class="sec1text">
+                        <p>Finally now all of your tools, content and collaborators
+                            are accessible from the same place. Dropbox Business is
+                            more than secure storage – it's a smart, seamless way to
+                            optimise your existing workflow.</p>
+    
+                            <button>Start Your free trial</button> <br>
+                            <small>Cancel any time</small> <br> <br> <br> 
+    
+                            <small>or get DropBox basic</small>
+                    </div>
+    
+                    <div class="sec1img">
+                          <img src="dropbox.png" alt="" class="dropBoxImage">
+                    </div>
+                </div>
+          
+        </div>
+        </div>
+
+    </body>
+</html>
