@@ -21,16 +21,16 @@ function checkInput() {
     if(nameValue === '') {
 		setErrorFor(name, "Shenoni Emrin, nuk mund te lihet zbrazet");
     } 
-     else if(nameValue.length>5){
-           setErrorFor(name, "Nuk duhet te jete gjatesia me e madhe se 5");
+
+    else if(nameValue.length>5){
+    setErrorFor(name, "Nuk duhet te jete gjatesia me e madhe se 5");
      }
+
     else if (nameValue) {
 		setSuccessFor(name, "Ne Rregull");
     }
-     
-
-
     
+
 }
 
 function checkSurname() {
@@ -48,6 +48,9 @@ function checkMail() {
     if(emailValue === '') {
 		setErrorFor(email, "Shenoni emailin ne menyre korrekte, e.g username@domain.com");
     } 
+    else if(!(emailValue.includes(".com")||emailValue.includes(".edu"))){
+      setErrorFor(email, "Ju duhet te dhenoni nje domain si: .com, .edu, .gov ose tjera");
+    }
     else if (emailValue) {
 		setSuccessFor(email,"Në Rregull");
     }
