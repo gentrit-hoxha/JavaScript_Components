@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+            
+        
+        }
+
+        a:link{
+            color: cornflowerblue ;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+    
+        a:hover{
+            color: orange;
+        }
+
+        .header{
+            background-color: coral;
+            font-size: 15px;
+            padding: 0;
+            margin: 0 !important;
+        
+            
+        }
+
+        .title{
+            width: fit-content;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      
+
+        .sticky {
+       
+            position: fixed;
+            left: 0;
+        top: 0;
+        width: 100%;
+        }
+
+   
+           .subpart{
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+               margin: 10px;
+               padding: 40px;
+               border: 4px solid yellow;
+           }
+
+
+           .container{
+               max-width: 1700px;
+               border: 4px solid green;
+               margin-left: auto;
+               margin-right: auto;
+           }
+
+          
+
+           .part1{
+               padding: 40px ;
+   
+               border: 4px solid red;
+               max-width: 750px !important;
+               margin: 5px;
+           }
+
+     
+           .part1 p {
+               width: fit-content;
+             padding-right: 25px;
+           }
+
+           .part2{
+               margin: 5px;
+               width: 100px !important;
+               height: auto;
+              flex: 1;
+               border: 4px solid blue;
+           }
+
+           @media only screen and (max-width: 800px) {
+            .subpart{
+                flex-direction: column;
+            }
+
+             #img{
+                max-width: 400px;
+                width: 100%;
+                height: auto;
+               
+              }
+           }
+
+           @media only screen and (max-width: 500px) {
+
+            .subpart{
+                padding: 0px !important;
+            }
+           }
+
+
+
+
+
+
+       
+    </style>
+    </head>
+    <body>
+
+        <div class="header" id="myHeader">
+            <div class="title">
+                <h1>The HEADER</h1>
+            </div>
+        </div>
+
+
+        <h4>Ordered List</h4>
+
+        <ul>
+            <li> <a href="https://www.google.com/" target="_blank">Item 1</a>
+            </li>
+            <li> <a href="">Item 2</a> </li>
+            <li> <a href="">Item 3</a> </li>
+            <li> <a href="">Item 4</a> </li>
+            <li> <a href="">Item 5</a> </li>
+            <li> <a href="">Item 6</a> </li>
+            <li> <a href="">Item 7</a> </li>
+            <li> <a href="">Item 8</a> </li>
+            <li> <a href="">Item 9</a> </li>
+            <li> <a href="">Item 10</a> </li>
+            <li> <a href="">Item 11</a> </li>
+            <li> <a href="">Item 12</a> </li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            molestias beatae dignissimos amet, a aspernatur accusamus ad, culpa
+            earum esse tempora porro doloremque quasi. In a quidem maiores
+            debitis nisi. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dolore tenetur repellendus, exercitationem assumenda
+            asperiores cupiditate repudiandae deleniti reiciendis aperiam nihil
+            nemo quos quia nobis, numquam laborum, modi inventore hic similique.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Praesentium iure sed non ducimus, iusto expedita perspiciatis
+            provident alias explicabo odit unde. Esse assumenda animi nihil!
+            Nisi qui maxime recusandae molestias. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Odit voluptatum illo ut perferendis
+            nostrum aspernatur rerum quibusdam nulla voluptatibus fugit,
+            molestias provident veritatis praesentium. Ipsum autem consectetur
+            veritatis earum assumenda?</p>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+            sed optio, laborum ea vero aliquid dicta. Aspernatur, voluptatum?
+            Fugit iste reiciendis odio dicta maiores accusamus voluptate
+            suscipit eligendi quia maxime? Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Veritatis incidunt itaque voluptas
+            quaerat voluptatibus laboriosam cupiditate esse. Fugiat similique
+            veritatis necessitatibus? Eaque quidem sequi suscipit provident,
+            earum molestias odio ab. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ipsam corporis accusamus suscipit sequi dolores!
+            Dolorem placeat quisquam, quaerat inventore voluptate perferendis
+            nulla consequatur obcaecati asperiores doloremque tenetur. Soluta,
+            totam error? lor
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
+            quo minima magnam soluta est ipsum laborum, aperiam ratione
+            recusandae numquam expedita quasi, temporibus eum reiciendis nihil
+            labore nobis, fuga molestiae. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Nobis odit doloremque molestias
+            excepturi, incidunt autem sint illo ipsam. Tenetur labore iure
+            molestias cupiditate! Eligendi impedit fuga maxime nemo maiores
+            dolorem. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat explicabo nobis minus commodi cumque hic ut cum dignissimos
+            obcaecati ad atque reprehenderit, animi distinctio eveniet. Repellat
+            suscipit hic voluptatibus tempore?
+        </p>
+
+        <div class="container">
+            <div class="subpart">
+                <div class="part1">
+
+                    <h1>Title</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ad non reprehenderit at necessitatibus neque debitis,
+                        iusto temporibus tempora corporis incidunt architecto
+                        minus dignissimos modi, eaque laborum esse libero
+                        maxime. Ab!</p>
+
+                    <h2>Subtitle</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reprehenderit ut unde corporis ipsum magni tenetur
+                        voluptates fuga dolorem minus praesentium, excepturi
+                        temporibus suscipit facilis vero consectetur ullam fugit
+                        similique placeat.</p>
+                </div>
+
+
+         
+                    
+                    <img src="TeamInABox.png" alt="" id="img">
+             
+                
+            </div>
+        </div>
+
+        <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+      </script>
+    </body>
+</html>
