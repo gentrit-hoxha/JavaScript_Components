@@ -184,7 +184,7 @@ console.log('********************************-');
 
          getSummary: function () {
              const rez = `${this.firstName} is a ${this.calcAge()} years old ${this.job} and he has ${this.hasDriverLicense ? 'a': 'no'} driver license`
-         return rez;     
+             return rez;     
     }
 
      };
@@ -202,12 +202,143 @@ console.log(person.calcAge());
 console.log(person.getSummary());
 
 
+const numbers  = [1,2,3,4,5,6,6];
+
+
+/*Coding challenge 3 in the Part 2 */
+ 
+
+
+    const John = {
+        firstName: 'John',
+        lastName: 'Smith',
+        mass: 40,
+        height: 1.68, 
+         calcBMI: function (mass, height) {
+             this.bmi = this.mass / (this.height*this.height);
+              return  this.bmi;
+         }
+    }
+
+    const Mark = {
+        firstName: 'Mark',
+        lastName: 'Miller',
+        mass: 100,
+        height: 1.95,
+        calcBMI: function (mass, height) {
+            this.bmi = this.mass / (this.height*this.height);
+            return this.bmi;
+        }
+    }
+
+
+John.calcBMI();
+Mark.calcBMI();
+
+  
+   console.log(John.bmi); 
+   console.log(Mark.bmi);
+
+   if (John.bmi > Mark.bmi) {
+       console.log(`${John.firstName} BMI ${John.bmi} is higher than ${Mark.firstName} BMI ${Mark.bmi}`);
+    } else if (Mark.bmi > John.bmi) {
+        console.log(`${Mark.firstName} BMI ${Mark.bmi} is higher than ${John.firstName} BMI ${John.bmi}`);
+   } 
+
+
+
+//    console.log("Lifting weights repetition 1");
+//    console.log("Lifting weights repetition 2");
+//    console.log("Lifting weights repetition 3");
+//    console.log("Lifting weights repetition 4");
+//    console.log("Lifting weights repetition 5");
+//    console.log("Lifting weights repetition 6");
+//    console.log("Lifting weights repetition 7");
+//    console.log("Lifting weights repetition 8");
+//    console.log("Lifting weights repetition 9");
+//    console.log("Lifting weights repetition 10");
+
+   for(let i=1; i<=10; i++){
+       console.log(`Liftin weights repetition ${i}`);
+   }
 
 
 
 
+   const jonas = ['Jonas','Miller', 26 , 'teacher' ];
+   const jonascopy = [];
+
+    for (let i = 0; i < jonas.length; i++) {
+      console.log(jonas[i], typeof(jonas[i]));
+        jonascopy.push(jonas[i]);
+    }
 
 
+console.log(jonascopy, typeof(jonascopy));
+
+
+console.log(`------ ONLY STRINGS --------`);
+
+    for (let i = 0; i < jonas.length; i++) {
+            if (typeof(jonas[i]) !== 'string') {continue} ;
+            console.log(jonas[i]);
+    }
+
+
+    console.log(`----------- ONLY NUMBERS ---------`)
+
+    for (let i = 0; i < jonas.length; i++) {
+        if (typeof(jonas[i]) === 'number') {break} ;
+        console.log(jonas[i]);
+     } 
+
+
+
+
+     /** for loop inside another for loop */
+
+
+      for (let exercise = 1; exercise <= 3; exercise++) {
+          console.log(`-------- Starting Exercise ${exercise}`);
+          
+          for (let rep = 1; rep < 6; rep++) {
+              console.log(` * Lifting weights repetition ${rep}`);
+          }
+      }
+
+
+
+      /**   Coding challenge 4 part 2 */
+
+      const array_bills   = [25,10,48,58,96,14,25];
+      const array_tips    = [];
+      const array_totals  = [];
+
+
+      for (let i = 0; i < array_bills.length; i++) {
+          array_tips.push(calcTip(array_bills[i]));
+
+          array_totals.push(array_bills[i] + array_tips[i]);
+          
+      }
+
+
+      console.log(array_bills);
+      console.log(array_tips);
+      console.log(array_totals);
+
+
+      
+
+      const calcAvg = function (num) {
+                let sum = 0;
+
+                for (let i = 0; i < num.length; i++) {
+                   sum = sum + num[i];                   
+                }
+
+                return sum / num.length;
+      }
 
 
 
