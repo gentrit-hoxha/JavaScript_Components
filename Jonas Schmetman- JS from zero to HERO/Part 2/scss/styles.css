@@ -1,0 +1,124 @@
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  max-width: 1500px;
+  width: 100%;
+  color: #f5f5f5;
+  background-color: slateblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container h1 {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.container #img2 {
+  margin-top: 50px;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+}
+
+.col {
+  margin: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.col h3, .col p {
+  padding: 10px;
+}
+
+#img1 {
+  max-width: 290px;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .row {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .col {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-left: 30px;
+  }
+  #img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #img1 {
+    max-width: 290px;
+    width: 100%;
+    height: auto;
+  }
+  #img2 {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  .row {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .col {
+    max-width: 290px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 25px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

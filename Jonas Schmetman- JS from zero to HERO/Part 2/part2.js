@@ -327,7 +327,6 @@ console.log(`------ ONLY STRINGS --------`);
       console.log(array_tips);
       console.log(array_totals);
 
-
       
 
       const calcAvg = function (num) {
@@ -342,3 +341,25 @@ console.log(`------ ONLY STRINGS --------`);
 
 
 
+      
+
+console.table(John);
+
+
+
+   
+
+
+
+function displatTemp(temperatures) {
+    var str = '';
+    
+    for (let i = 0; i < temperatures.length; i++) {
+        str = str + `.....${temperatures[i]}°C in ${0} days  `;
+    }
+    
+    return str;
+}
+
+const temperatures = [10,15,47];
+console.log(displatTemp(temperatures));
