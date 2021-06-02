@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Comparing BMI</title>
+
+</head>
+<body>
+    <div class="mainContent">
+        <h1>Comparig BMI</h1>
+
+        <div class="data-content">     
+            <div class="inputs">
+                <h1>Inputs</h1>
+
+                <div class="user-contents">
+                    <div class="mark">
+                           <h3>Mark Miller</h3>
+                           
+                           <img src="images/user1.png" id="markImg" alt="">
+
+                           <div class="input-field" id="weightInput">
+                               <input id="markHeight" type="number" class="height">
+                               <label for="markHeight">Enter your height in m</label>
+                            </div>
+                            
+                            <div class="input-field" id="weightInput">
+                            <input id="markWeight" type="number" class="weight">
+                            <label for="markWeight">Enter your weight in kg</label>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="john">
+                        <h3 id="h333">John Doe</h3>
+                        
+                        <img src="images/user2.png" id="johnImg" alt="">
+                        
+                        <div class="input-field" id="weightInput">
+                             <input id="johnHeight" type="number" class="height">
+                             <label for="johnHeight">Enter your height in m</label>
+                       </div>
+                       
+                       <div class="input-field" id="weightInput">
+                            <input id="johnWeight" type="number" class="weight">
+                            <label for="johnWeight">Enter your weight in kg</label>
+                       </div>
+
+                    </div>
+
+
+                </div>
+
+                <button class="waves-effect waves-light btn" id="compareButton">COMPARE</button>
+                
+            </div>
+
+            <div class="results">
+                <h1>Results</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="bmi.js"></script>
+</body>
+</html>
