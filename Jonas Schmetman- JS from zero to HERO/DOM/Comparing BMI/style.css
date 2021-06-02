@@ -18,8 +18,8 @@ h1 {
 .data-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
 }
 
 .data-content .inputs {
@@ -52,11 +52,36 @@ h1 {
   padding: 1.5rem;
 }
 
+.data-content .results h5 {
+  margin-left: 2rem;
+  font-size: 30px;
+}
+
+.data-content .results table {
+  margin-left: 3rem;
+  max-width: 500px;
+}
+
+.data-content .results .alert {
+  margin: 1.4rem 2rem;
+  font-weight: bold;
+}
+
+.data-content .results h4 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .user-contents {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
+}
+
+.user-contents .mark {
+  background-color: white !important;
 }
 
 .user-contents .mark #markImg {
