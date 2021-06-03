@@ -11,7 +11,7 @@
 
 
   btnCompare.addEventListener('click' , function() {
-  
+   
     var markDescription = `Mark is ${markHeight.value} cm tall and weighs ${markWeight.value} kg`;
     var johnDescription = `John is ${johnHeight.value} cm tall and weighs ${johnWeight.value} kg`;
       
@@ -19,6 +19,8 @@
 
       displayDataInTables();
       displayBMItable();
+      MarkObesityLevel();
+      JohnObesityLevel();
 
     // console.log(markDescription);
     // console.log(johnDescription);
@@ -68,6 +70,69 @@
       }
 
 
+         function MarkObesityLevel() {
+          const markBMI = calcBmi(markHeight.value , markWeight.value);
+            if (markBMI < 18.5 ) {
+              document.querySelector('.markAlert').textContent = 'Mark is UNDERWEIGHT';
+              document.querySelector('.markAlert').className = 'alert alert-info markAlert';
+
+            }
+
+            else if ((markBMI>18.5 && markBMI<24.9) ) {
+              document.querySelector('.markAlert').textContent = 'Mark weight is NORMAL';
+              document.querySelector('.markAlert').className = 'alert alert-success markAlert';
+
+            }
+
+            else if ((markBMI>25 && markBMI<29.9) ) {
+              document.querySelector('.markAlert').textContent = 'Mark is OVERWEIGHT';
+              document.querySelector('.markAlert').className = 'alert alert-warning markAlert';
+
+
+            }
+
+            else if ((markBMI>30 ) ) {
+              document.querySelector('.markAlert').textContent = 'Mark is OBESE';
+              document.querySelector('.markAlert').className = 'alert alert-danger markAlert';
+
+            }
+          
+      }
+
+
+      function JohnObesityLevel() {
+        const johnBMI = calcBmi(johnHeight.value , johnWeight.value);
+       
+          if ( ( johnBMI<18.5 )) {
+
+
+            document.querySelector('.johnAlert').textContent = 'John is UNDERWEIGHT';
+            document.querySelector('.johnAlert').className = 'alert alert-info johnAlert';
+          }
+          
+          else if ( (johnBMI>18.5 && johnBMI<24.9)) {
+            
+            
+            document.querySelector('.johnAlert').textContent = 'John weight is NORMAL';
+            document.querySelector('.johnAlert').className = 'alert alert-success johnAlert';
+          }
+
+          else if ( (johnBMI>25 && johnBMI<29.9)) {
+
+            document.querySelector('.johnAlert').textContent = 'John is OVERWEIGHT';
+            document.querySelector('.johnAlert').className = 'alert alert-warning johnAlert';
+          }
+
+          else if ((johnBMI>30 ) ) {
+
+
+            document.querySelector('.johnAlert').textContent = 'John is OBESE';
+            document.querySelector('.johnAlert').className = 'alert alert-danger johnAlert';
+          }
+
+
+        
+       }
 
 
 

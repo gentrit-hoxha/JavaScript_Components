@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+
+        .overlay{
+            position: absolute;
+            width:0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: 0.4s;
+            
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .overlay-content a{
+            text-decoration: none;
+            color: white;
+            font-size: 35px;
+            padding: 2rem 0;
+          
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+        .closeBtn{
+            font-size: 100px;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            margin-bottom: 5rem;
+            top: 0rem;
+            right: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Heading 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cupiditate quo suscipit excepturi vel unde sint ex, dolorum vitae dolore delectus atque laborum alias praesentium pariatur corrupti repellendus illum? Possimus. </p>
+
+     <h2>Heading 2</h2>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque, iusto sint amet nam neque est, blanditiis eius suscipit quaerat aliquid, ab aspernatur! Quod exercitationem deleniti aliquam, itaque obcaecati earum Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nam explicabo nisi molestiae accusamus ab dicta, odio distinctio consequatur ipsum blanditiis expedita molestias. Aperiam aliquid ab sed pariatur obcaecati iure!.</p>
+
+
+
+     <div class="overlay">
+         <a href="javascript:void(0)"  class="closeBtn">&times;</a>
+         <div class="overlay-content">
+             <a href="">About</a>
+             <a href="">About</a>
+             <a href="">About</a>
+             <a href="">About</a>
+         </div>
+     </div>
+
+
+<button class="openBtn" style="font-size: 40px; 
+                       background-color: none; 
+                       border: none;
+                       background-color: white;
+                       cursor: pointer;">&#9776; OPEN </button>
+
+
+
+
+      <script>
+          document.querySelector('.openBtn').addEventListener('click' , function () {
+              document.querySelector('.overlay').style.width = "100%";
+          });
+          document.querySelector('.closeBtn').addEventListener('click' , function () {
+              document.querySelector('.overlay').style.width = "0%";
+          });
+
+         
+
+
+
+function faktorieli(number) {
+    var rez = 1;
+    if (number === 0 || number === 1) {
+        rez = 1 ;
+    }
+    else {
+           for (let i = 1; i <=number; i++) {
+               rez = rez * i;
+           }
+
+    }
+           return rez ;
+}
+
+   function fibonnaci( exactly ) {
+
+        var fib = [];
+
+           fib[0] = 0;
+            fib[1] = 1;
+
+       for (let i = 2; i <= exactly; i++) {
+                  fib[i] = fib[i-1] + fib[i-2]; 
+                  //console.log(fib[i]);     
+       }
+       return fib[exactly];
+   }
+
+   
+
+
+
+
+
+
+
+console.log(faktorieli(5));
+console.log(fibonnaci(9));
+
+
+      </script>
+    </body>
+</html>
