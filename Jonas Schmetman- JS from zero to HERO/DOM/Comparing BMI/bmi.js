@@ -9,7 +9,14 @@
 
 
 
+   var user1 = prompt('Enter the Name and Surname of the  of the 1-st Person');
+   var user2 = prompt('Enter the Name and Surname of the  of the 2-nd Person');
+  
+    document.querySelector('#useriPare').textContent = user1;
+    document.querySelector('#h333').textContent = user2;
 
+
+    
   btnCompare.addEventListener('click' , function() {
    
     var markDescription = `Mark is ${markHeight.value} cm tall and weighs ${markWeight.value} kg`;
@@ -92,7 +99,7 @@
             }
 
             else if ((markBMI>30 ) ) {
-              document.querySelector('.markAlert').textContent = 'Mark is OBESE';
+              document.querySelector('.markAlert').textContent = `${user1} is OBESE`;
               document.querySelector('.markAlert').className = 'alert alert-danger markAlert';
 
             }
