@@ -1,0 +1,7 @@
+ /*------------- RESPONSIVE DESIGN LECTURES ----- */
+
+[X] Responsive Design
+[X] Media Queries
+  [] min-width
+  [] max-width
+  [] min-width and max-width
