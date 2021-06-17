@@ -13,8 +13,7 @@ var highscore =  0;
        document.querySelector('.message').textContent = message;
    }
 
-
-
+   
 function print() {
     const value  = Number(input.value);
     input.value = '';
@@ -88,13 +87,6 @@ function print() {
     }
     
 }
-
-function refreshPage(){
-    window.location.reload();
-} 
-
-
-
 
 function refreshPage1() {
     score = 20;
