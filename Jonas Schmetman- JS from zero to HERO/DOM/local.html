@@ -4,25 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+           
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+      
+        button{
+            padding: 10px 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            border: none;
+            background-color: lightblue;
+            border: 1px solid #222;
+            cursor: pointer;
+            
+        }
+
+      
+
+        .content {
+            border: 1px solid #222;
+            margin: 0 10px;
+            padding: 15px;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .block{
+            display: block;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .links{
+            display: flex;
+            align-items: center;
+        }
+
+        ul li {
+
+            margin-left:15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+        ul{
+            display: none;
+        }
+        .openBtn{
+            display: block !important;
+            background-color: none;
+            border: none;
+            font-size: 40px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .linqet{
+            position: absolute;
+            color: white;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+            transition:  0.45s;
+            
+        }
+
+        .linqet1{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .linqet1 h3 {
+            font-size: 35px;
+        }
+
+        .closeBtn{
+            
+            display: block !important;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 60px;
+            font-weight: bolder;
+        }
+}
+    </style>
 </head>
 <body>
     
 
+
+    <header>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+
+
+        <div class="links">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2 </li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+    
+            </ul>
+
+             <button class="openBtn" style="display: none;">&#9776;</button>
+        </div>
+    </header>
+
+
+    <div class="linqet">
+
+        <button class="closeBtn" style="display: none;">&#10006;</button>
+        <div class="linqet1">
+         <h3>Link1</h3>
+        <h3>Link1</h3>
+        <h3>Link1</h3>
+        <h3>Link1</h3>
+        </div>
+    </div>
+
+
     <h1>WORKING......</h1>
+
+       <button class="btn">Button1</button>
+       <button class="btn">Button2</button>
+       <button class="btn">Button3</button>
+
+
+ 
+        <div class="content " id="tab1">
+            <h1>Title 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste, cumque, nostrum id dolores fuga esse quae delectus necessitatibus odit consequatur doloremque a voluptate ullam impedit, similique neque! Eligendi, deleniti.
+            Ab corrupti aperiam consequatur porro dolore molestiae quibusdam numquam delectus, vel quos quis iste, soluta voluptate. Itaque excepturi ducimus beatae, a quo, harum corporis molestias quaerat cupiditate libero quibusdam fugit.
+            </p>
+        </div>
+
+        <div class="content " id="tab2">
+            <h1>Title 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste, cumque, nostrum id dolores fuga esse quae delectus necessitatibus odit consequatur doloremque a voluptate ullam impedit, similique neque! Eligendi, deleniti.
+            Ab corrupti aperiam consequatur porro dolore molestiae quibusdam numquam delectus, vel quos quis iste, soluta voluptate. Itaque excepturi ducimus beatae, a quo, harum corporis molestias quaerat cupiditate libero quibusdam fugit.
+            </p>
+        </div>
+
+        <div class="content " id="tab3">
+            <h1>Title 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste, cumque, nostrum id dolores fuga esse quae delectus necessitatibus odit consequatur doloremque a voluptate ullam impedit, similique neque! Eligendi, deleniti.
+            Ab corrupti aperiam consequatur porro dolore molestiae quibusdam numquam delectus, vel quos quis iste, soluta voluptate. Itaque excepturi ducimus beatae, a quo, harum corporis molestias quaerat cupiditate libero quibusdam fugit.
+            </p>
+        </div>
+ 
+     
+
 
     <script>
 
     
-        localStorage.setItem('item1', 'book');
-        localStorage.setItem('item2', 'computer');
-        localStorage.setItem('item3', 'drink');
+        // localStorage.setItem('item1', 'book');
+        // localStorage.setItem('item2', 'computer');
+        // localStorage.setItem('item3', 'drink');
 
-        console.log(localStorage.getItem('item2'));
-        console.log(localStorage);
+        // console.log(localStorage.getItem('item2'));
+        // console.log(localStorage);
+
+  
 
 
+     var tabContent = document.getElementsByClassName("content");
+         for ( i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+             
+         }
+
+        var btn = document.querySelectorAll('.btn');
 
         
+        for ( i = 0; i < tabContent.length; i++) {
+
+         btn[i].addEventListener('click', function ( ) {
+            tabContent[i].style.display = "block";
+         });
+             
+         }
+
+
+
+const openBtn = document.querySelector('.openBtn');
+
+var overflow = document.querySelector('.linqet');
+openBtn.addEventListener('click', function () {
+    overflow.style.width = "100%";
+});
+         
+const closeBtn = document.querySelector('.closeBtn');
+closeBtn.addEventListener('click', function () {
+    overflow.style.width = "0%";
+});
+
         </script>
 </body>
 </html>
