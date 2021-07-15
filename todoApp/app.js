@@ -4,6 +4,7 @@ const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
+todoList.addEventListener('click' , deleteFunction);
 
 
 
@@ -18,37 +19,57 @@ function addTodo(event) {
     //Preventing from submiting the form
     event.preventDefault();
     console.log('Button working');
+    
+    if (todoInput.value == '') {
+  
+    }
+    else {
+      //Creating the todoDiv
+  const todoDiv = document.createElement('div');
+  todoDiv.classList.add('todo');
+
+  //Creating the li of the todoList
+  
+const newTodo = document.createElement('li');
+newTodo.innerText = todoInput.value;
+todoInput.value = '';
+ newTodo.classList.add('todo-item');
+ 
+ todoDiv.appendChild(newTodo);
+ 
+ //Creating the check button
+ const checkBtn = document.createElement('button');
+ checkBtn.innerHTML = '<i class="fas fa-check"> </i>';
+ checkBtn.classList.add('complete-btn');
+ 
+ todoDiv.appendChild(checkBtn);
+ 
+ //Creating the Delete BUTTON
+ 
+ const trashButton = document.createElement('button');
+ trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
+ trashButton.classList.add('trash-btn');
+ 
+ todoDiv.appendChild(trashButton);
+ 
+ 
+ todoList.append(todoDiv);
+}
 
 
-    //Creating the todoDiv
-    const todoDiv = document.createElement('div');
-      todoDiv.classList.add('todo');
 
-    //Creating the li of the todoList
+}
 
-    const newTodo = document.createElement('li');
-     newTodo.innerText = 'hey';
-     newTodo.classList.add('todo-item');
-
-     todoDiv.appendChild(newTodo);
-
-     //Creating the check button
-     const checkBtn = document.createElement('button');
-     checkBtn.innerHTML = '<i class="fas fa-check"> </i>';
-     checkBtn.classList.add('complete-btn');
-
-     todoDiv.appendChild(checkBtn);
-
-     //Creating the Delete BUTTON
-
-     const trashButton = document.createElement('button');
-     trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
-     trashButton.classList.add('trash-btn');
-
-     todoDiv.appendChild(trashButton);
+const delBtn = document.querySelector('.complete-btn');
+const chkBtn = document.querySelector('.trash-btn');
 
 
-     todoList.append(todoDiv);
-   
 
+function deleteFunction(e) {
+  const item  = e.target;
+
+  if(item.classList[0] === 'trash-btn'){
+     const todo = item.parentElement;
+     todo.remove();
+  }
 }

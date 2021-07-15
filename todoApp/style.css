@@ -17,7 +17,7 @@ header {
 }
 
 header, form {
-    min-height: 20vh;
+    min-height: 17vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,20 +57,24 @@ ul {
 }
 
 .todo-list {
-    min-width: 30%;
+    min-width: 50%;
 }
 
 .todo{
-    background-color: #f6d365;
+    background-color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
- 
-    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 1rem;
 }
 
 .todo li {
    flex: 1;
+   
+   
 }
 
 .trash-btn , .complete-btn {
@@ -78,4 +82,27 @@ ul {
     cursor: pointer;
     background-color: #ff6f47;
     padding: 1rem;
+    cursor: pointer;
+}
+
+.trash-btn {
+    background-color: #DD4132;
+    color: white;
+    min-height: 3.8rem;
+    min-width: 3.8rem;
+}
+
+.complete-btn {
+    background-color: #00A170;
+    color: white;
+    min-height: 3.8rem;
+    min-width: 3.8rem;
+}
+
+.todo-item {
+    padding: 1rem ;
+}
+
+.fa-trash , .fa-check {
+    pointer-events: none;
 }
