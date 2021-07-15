@@ -49,27 +49,28 @@ todoInput.value = '';
  const trashButton = document.createElement('button');
  trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
  trashButton.classList.add('trash-btn');
+
  
  todoDiv.appendChild(trashButton);
  
  
  todoList.append(todoDiv);
-}
-
-
-
-}
-
-const delBtn = document.querySelector('.complete-btn');
-const chkBtn = document.querySelector('.trash-btn');
-
-
+}}
 
 function deleteFunction(e) {
   const item  = e.target;
 
+  // console.log(item.classList[0]);
+  // console.log(item.classList[1]);
+  // console.log(item.classList[2]);
+
   if(item.classList[0] === 'trash-btn'){
      const todo = item.parentElement;
      todo.remove();
+  }
+
+  if (item.classList[0] === 'complete-btn') {
+     const todo = item.parentElement;
+     todo.classList.toggle("completed");
   }
 }
