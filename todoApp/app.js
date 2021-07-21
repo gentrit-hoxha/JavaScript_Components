@@ -11,7 +11,7 @@ const filterOption = document.querySelector(".filter-todo");
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteFunction);
 
-filterOption.addEventListener("click", filterTheTodo0);
+filterOption.addEventListener("click", filterTheTodo);
 
 var count = 0;
 
@@ -22,7 +22,11 @@ function addTodo(event) {
   console.log("Button working");
 
   if (todoInput.value == "") {
-  } else {
+  
+      
+  } 
+  
+  else {
     
     //Creating the todoDiv
     const todoDiv = document.createElement("div");
