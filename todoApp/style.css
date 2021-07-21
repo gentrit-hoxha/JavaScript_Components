@@ -69,7 +69,7 @@ ul {
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
 }
 
 .todo li {
@@ -82,7 +82,7 @@ ul {
     border: none;
     cursor: pointer;
     background-color: #ff6f47;
-    padding: 1rem;
+    padding: 1.5rem;
     cursor: pointer;
 }
 
