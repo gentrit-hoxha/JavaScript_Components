@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+      
+}
+
+header {
+    padding: 1.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+   .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 14px !important;
+   }
+
+
+ ul {
+     list-style-type: none;
+     display: flex;
+     align-items: center;
+}
+
+ul li {
+    margin-left: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+   
+}
+
+.entry-part{
+    height: 100vh;
+    background:  url("../images/cool-background\(3\).png") center center/cover no-repeat;
+    
+}
+
+.subcontent {
+    max-width: 450px;
+    padding: 4rem 8rem;
+}
+ 
+
+.contenti { 
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+@media (max-width: 600px) {
+    .subcontent {
+        padding: 0;
+        max-width: 250px;
+    }
+
+    ul {
+        display: none;
+    }
+
+}
