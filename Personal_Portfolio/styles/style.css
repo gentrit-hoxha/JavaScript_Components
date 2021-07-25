@@ -140,7 +140,7 @@ a:hover {
     
 }
 
-.about-me-part , .my-skills-content{
+.about-me-part , .my-skills-content, .education-content{
 
     max-width: 1150px;
     margin-left: auto;
@@ -153,7 +153,7 @@ a:hover {
     padding: 4rem 0 2rem 2.3rem;
 }
 
-.about-me-part .abt-main::after  , .skill-heading::after{
+.about-me-part .abt-main::after  , .skill-heading::after , .education-heading::after{
     content:' ';
     display:block;
     border:2px solid  #45b39d ;
@@ -219,27 +219,33 @@ label {
 }
 
 .download-cv {
-    color: white;
+
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bolder !important;
     background-color:  #117a65 ;
-    max-width: 300px;
+    max-width: 400px;
+
     margin-top: 1.5rem !important;
     border-radius: 0 !important;
 }
 
+
+
+
 .download-cv a {
-    color: white;
-    font-size: 20px;
+    color: white !important;
+    font-size: 25px;
+    padding: 1rem;
     border-radius: 0;
 }
 
 .my-skills {
-    height: 45rem;
+    height: 37.5rem;
 }
 
 
-.my-skills-content .skill-heading {
+.my-skills-content .skill-heading, .education-heading {
     font-size: 45px;
     padding: 3rem 0 2rem 2.3rem;
 }
@@ -281,3 +287,56 @@ label {
  .progress {
      height: 0.185rem !important;
  }
+
+ .education{
+    background-color: #eaedf2;
+    height: 55rem;
+ }
+
+ .school-time {
+     margin-top: 0.5rem;
+     display: flex;
+     align-items: flex-start;
+     height: fit-content;
+     
+ }
+  .school-time p {
+      margin-left: 1rem;
+  }
+
+  .school-item {
+      margin-top: 1rem;
+      padding: 2rem 1rem;
+      background-color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      margin-left: 2rem;
+  }
+
+  .school-name {
+      font-size: 2rem;
+  }
+
+.school-faculty {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+}
+
+.school-degree {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+}
+
+
+.school-time h5 {
+    margin-top: -2rem !important;
+}
+
+
+.add-info {
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+#download-cv-to-education-part{
+    margin-left: 4rem;
+}

@@ -79,4 +79,13 @@
         margin-top: 1rem;
     }
 
+   .my-skills {
+       height: 75rem;
+   }
+
+   .school-item {
+       
+       margin: 4px;
+   }
+
 }
