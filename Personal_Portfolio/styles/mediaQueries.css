@@ -1,0 +1,62 @@
+@media (max-width: 850px) {
+    .subcontent {
+        padding: 0;
+        max-width: 250px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .openBtn {
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+
+    }
+
+    .logo {
+        font-size: 10px  !important;
+    }
+
+    .about-me-content{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .user-img{
+        max-width: 200px;
+        border: none;
+    }
+ 
+
+    .contact-right-part {
+        margin-left: 0rem;
+    }
+  
+
+    .about-me-details p {
+        font-size: 15px;
+    }
+
+    .abt-main {
+        text-align: center;
+    }
+    
+    .abt-main::after {
+        margin-left: 2rem;
+        content:' ';
+        display:block;
+        border:2px solid  #45b39d ;
+        width: 100px;
+        border-radius:4px;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+        -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+        -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    }
+    
+
+}
