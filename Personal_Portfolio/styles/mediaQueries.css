@@ -40,12 +40,10 @@
         font-size: 15px;
     }
 
-    .abt-main {
-        text-align: center;
-    }
+  
     
     .abt-main::after {
-        margin-left: 2rem;
+
         content:' ';
         display:block;
         border:2px solid  #45b39d ;
@@ -58,5 +56,27 @@
         -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
     }
     
+
+    .about-me {
+        background-color: #eaedf2;
+        height: 75rem;
+        
+    }
+
+    .about-me-details{
+        padding-left: 1rem;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills-left-part, .skills-right-part {
+        width: 100% !important;
+    }
+
+    .skill-item {
+        margin-top: 1rem;
+    }
 
 }

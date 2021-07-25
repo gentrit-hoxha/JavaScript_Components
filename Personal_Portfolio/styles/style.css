@@ -7,16 +7,19 @@
 
 header {
     padding: 1.5rem 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap !important;
 }
    .logo {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 14px !important;
+    font-family: 'Archivo Black', sans-serif !important;
+    font-size: 25px !important;
    }
 
+ a {
+     text-decoration: none !important;
+ }
 
  ul {
      list-style-type: none;
@@ -60,7 +63,7 @@ ul li {
 a {
     font-size: 30px;
     text-decoration: none;
-    color: black;
+    color: black !important;
     margin-right: 2rem;
     font-size: 30px;
     border-radius: 50%;
@@ -123,7 +126,7 @@ a:hover {
 
 
 .closeBtn {
-    color: white;
+    color: white !important;
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -133,9 +136,11 @@ a:hover {
 
 .about-me {
     background-color: #eaedf2;
+    height: 45rem;
+    
 }
 
-.about-me-part {
+.about-me-part , .my-skills-content{
 
     max-width: 1150px;
     margin-left: auto;
@@ -148,7 +153,7 @@ a:hover {
     padding: 4rem 0 2rem 2.3rem;
 }
 
-.about-me-part .abt-main::after {
+.about-me-part .abt-main::after  , .skill-heading::after{
     content:' ';
     display:block;
     border:2px solid  #45b39d ;
@@ -170,7 +175,7 @@ a:hover {
 
 
 .about-me-details{
-    padding: 0rem 0 1rem 1rem;
+    padding: 0rem 0 1rem 3rem;
 }
 
 .user-img{
@@ -187,14 +192,16 @@ label {
 }
 
   .contact {
+      
       margin-top: 2rem;
       font-size: 15px;
   }
 
 .contact-details {
-    padding-top: 1rem;
-    display: flex;
-    align-items: flex-start;
+    padding-top: 1rem !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    height: 35px !important;
 }
 
 .contact{
@@ -226,3 +233,51 @@ label {
     font-size: 20px;
     border-radius: 0;
 }
+
+.my-skills {
+    height: 45rem;
+}
+
+
+.my-skills-content .skill-heading {
+    font-size: 45px;
+    padding: 3rem 0 2rem 2.3rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.skills-left-part {
+    width: 47.5%;
+}
+
+.skills-right-part {
+    width: 47.5%;
+}
+
+.skill-item {
+    padding: 1rem;
+    
+}
+
+.skill-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-description p {
+    padding-top: 1rem;
+     font-size: 20px !important;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .progress {
+     height: 0.185rem !important;
+ }
