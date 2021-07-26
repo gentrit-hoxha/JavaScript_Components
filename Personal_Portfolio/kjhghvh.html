@@ -1,125 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <title>Document</title>
-
-    <style>
-*
-{
-  margin:0;
-  padding:0;
-  font-family:'Roboto',sans-serif;
-}
-body
-{
-  background:#03a9f4;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
-  display:flex;
-}
-.box
-{
-  background:#fff;
-  width:300px;
-  height:400px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  flex-direction:column;
-  box-shadow:0 30px 60px rgba(0,0,0,.4);
-  transition: transform .2s;
-}
-/* .box:hover
-{
- transform:scale(1.2);
-} */
-.box .percent
-{
-  width:150px;
-  height:150px;
-  position:relative;
-}
-.box .percent svg
-{
-  width:150px;
-  height:150px;
-  position:relative;
-}
-.box .percent svg circle
-{
-  width:150px;
-  height:150px;
-  fill:none;
-  stroke-width:10;
-  stroke:#000;
-  transform:translate(5px,5px);
-  stroke-dasharray:440;
-  stroke-dashoffset:440;
-  stroke-linecap:round;
-}
-.box .percent svg circle:nth-child(1)
-{
-  stroke-dashoffset:0;
-  stroke:#f3f3f3;
-}
-.box .percent svg circle:nth-child(2)
-{
-  stroke-dashoffset:calc(440 - (440 * 87) / 100);
-  stroke:#03a9f4;
-}
-.box .percent .num
-{
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:absolute;
-  color:#111;
-}
-.box .percent .num h2
-{
-  font-size:48px;
-}
-.box .percent .num h2 span
-{
-  font-size:24px;
-}
-.box .text
-{
-  padding 10px 0 0;
-  color:#999;
-  font-weight:700;
-  letter-spacing:1px;
-}
-
-
-    </style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="box">
-  <div class="percent">
-    <svg>
-      <circle cx="70" cy="70" r="70"></circle>
-      <circle cx="70" cy="70" r="70"></circle>
-    </svg>
-    <div class="num">
-      <h2>87<span>%</span></h2>
+  
+  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
-  <h2 class="text">Progress</h2>
-</div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 </body>
 </html>

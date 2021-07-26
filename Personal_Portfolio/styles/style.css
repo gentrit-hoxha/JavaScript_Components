@@ -5,6 +5,10 @@
       
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     padding: 1.5rem 0.2rem;
     display: flex !important;
@@ -140,7 +144,7 @@ a:hover {
     
 }
 
-.about-me-part , .my-skills-content, .education-content{
+.about-me-part , .my-skills-content, .education-content, .projects-content{
 
     max-width: 1150px;
     margin-left: auto;
@@ -153,7 +157,8 @@ a:hover {
     padding: 4rem 0 2rem 2.3rem;
 }
 
-.about-me-part .abt-main::after  , .skill-heading::after , .education-heading::after{
+.about-me-part .abt-main::after  , .skill-heading::after , .education-heading::after, .projects-heading::after{
+    margin-top: 0.5rem;
     content:' ';
     display:block;
     border:2px solid  #45b39d ;
@@ -245,7 +250,7 @@ label {
 }
 
 
-.my-skills-content .skill-heading, .education-heading {
+.my-skills-content .skill-heading, .education-heading, .projects-content {
     font-size: 45px;
     padding: 3rem 0 2rem 2.3rem;
 }
@@ -340,3 +345,103 @@ label {
 #download-cv-to-education-part{
     margin-left: 4rem;
 }
+
+
+.projects{
+    background-color: #fff;
+    height: 55rem;
+ }
+
+
+ 
+
+
+
+
+
+
+ .tab {
+    overflow: hidden;
+    border: 0px solid #ccc;
+    margin-top: 2rem;
+  
+  }
+
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin-left: 1rem;
+    border-bottom: 1px solid black;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    cursor: pointer;
+    transform: translateY(-0.4rem);
+    transition: 0.25s;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    border: none;
+    background-color: #117a65;
+    color: white;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    margin-top: 2rem;
+    border-top: none;
+  }
+
+  .tabcontent1 {
+      display: block;
+  }
+
+ .card-title {
+     font-size: 1.7rem;
+ }
+
+  .card-text{
+      font-size: 1rem;
+  }
+
+  .card-linkk {
+      font-size: 1rem;
+      color: black !important;
+      background-color: white;
+      border-radius: 0 !important;
+      padding: 0.5rem;
+      margin-top: -5rem !important;
+      border-bottom: 3px solid gray;
+      border-bottom-style: double !important;
+    }
+
+  .card-linkk:hover {
+      background-color: #117a65 !important;
+      color: white !important;
+      transform: translateY(-1rem);
+      transition: 0.5s;
+      border-bottom: none;
+      border-bottom-style: none;
+  }
+
+
+  .card {
+      margin-top: 0.74rem !important;
+  }
+
+
+
+ 
+
