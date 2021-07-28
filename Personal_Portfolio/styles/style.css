@@ -441,6 +441,15 @@ label {
       margin-top: 0.74rem !important;
   }
 
+  footer {
+      background-color: #117a65;
+      text-align: center;
+      color: white;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-family: 'Poppins' , sans-serif;
+  }
+
 
 
  
