@@ -10,14 +10,13 @@ const filterOption = document.querySelector(".filter-todo");
 
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteFunction);
-
 filterOption.addEventListener("click", filterTheTodo);
 
 var count = 0;
 
 //Functions
 function addTodo(event) {
-  //Preventing from submiting the form0
+  //Preventing from submiting the form
   event.preventDefault();
   console.log("Button working");
 
@@ -33,9 +32,7 @@ function addTodo(event) {
     todoDiv.classList.add("todo");
 
     //Creating the li of the todoList
-
     const newTodo = document.createElement("li");
-
     newTodo.innerText = `${count = count +1}.  ${todoInput.value}`;
     todoInput.value = "";
     newTodo.classList.add("todo-item");
@@ -106,6 +103,8 @@ function deleteFunction(e) {
            }
      });
    }
+
+
 
 
 
