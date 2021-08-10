@@ -1,6 +1,5 @@
 'use strict';
 
-
 const score0El   = document.querySelector('#score--0');
 const score1El   = document.querySelector('#score--1');
 const current0El = document.querySelector('#current--0');
@@ -29,8 +28,14 @@ let currentScore = 0;
 let activePlayer = 0;
    
    
-   
-   const switchPlayer = () => {
+   /*
+   By this function we change the player. This part of the code is going to be called
+   when the dice number is 1 so the current score becomes 0. Than by an if statement
+   we change the status of the player from zero to one and the toggle the class player--active
+   to change the color of the active player
+   */
+
+   function switchPlayer() {
        document.getElementById(`current--${activePlayer}`).textContent = 0;
        currentScore = 0;
           
@@ -41,8 +46,14 @@ let activePlayer = 0;
            
            playerO.classList.toggle('player--active');
            player1.classList.toggle('player--active');
-        }
+   }
         
+/* 
+  In this function we generate a random number from 1-6 than we display the exact dice
+  if the dice happens to be different from the 1 we add that number to the current score
+  but in the moment the value of the dice happens to be 1 we change the player by calling the function
+  switchPlayer();
+*/
 
   function mainFunction() {
       const diceNum  = Math.ceil(Math.random() * 6);
@@ -56,13 +67,13 @@ let activePlayer = 0;
         }
         
         else {
-            
             switchPlayer();
-            
         }
     }
 
-    
+    /*
+      This function allows us to hold the result for the specific player.
+    */
     function holdFunction() {
         
         scores[activePlayer] += currentScore;
@@ -77,6 +88,14 @@ let activePlayer = 0;
              switchPlayer();
         }
   }
+
+
+
+/*
+  This function is called when we click the new Game button. As we know from all the game
+  practices everything is supposed to come to the zero point. So we set all the results 
+  to the zero point and we switch by default to the player 1 to begin the new game.
+*/
 
   function resetTheGame() {
      scores[0] = 0;
