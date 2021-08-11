@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="shortcut icon" href="#">
         <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
@@ -111,6 +112,11 @@
 
         }
 
+        input , button {
+            margin: 1.5rem;
+            padding: 1rem;
+            font-size: 20px;
+        }
 
 
 
@@ -162,21 +168,46 @@
                             <small>or get DropBox basic</small>
                     </div>
     
-                    <div class="sec1img">
-                          <img src="dropbox.png" alt="" class="dropBoxImage">
-                    </div>
+                   
                 </div>
+
+
           
         </div>
         </div>
 
 
+        <input type="text" class="name">
+        <button class="enter">PUSH TO THE LIST</button>
+
         <script>
-            console.log("Hello");
+            
+            const names = ['Lorik', 'Gentrit'];
 
-        var string = "gentrit.hoxha1@student.uni-pr.edu";
+            console.log(names);
 
-        console.log(string.includes(".edu"));
+
+         const input = document.querySelector('.name');
+         const enterBtn = document.querySelector('.enter');
+        
+
+          function pushToTHeList() {
+              let value = input.value;
+              input.value = '';
+                names.push(value);
+                console.log(names);
+            
+          }
+          enterBtn.addEventListener('click' , pushToTHeList);
+
+          const person = {
+              name: 'Gentrit',
+              surname: 'Hoxha',
+              age: 20
+          }
+
+          console.log(person['age']);
+
         </script>
     </body>
 </html>
