@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <title>Grid Examples</title>
     <style>
         .grid-item {
@@ -14,26 +15,92 @@
         }
 
         .grid-container {
+            display: flex;
+            
+            margin-left: auto;
+            margin-right: auto;
+            
+            max-width: 1400px;
             display: grid;
-            grid-template-columns: 40% 55%;
+            grid-template-columns: 30% 40% 30%;
             
         }
 
        
         .grid-item-1 {
-            grid-column: span 2;
+            grid-column: span 3;
         }
 
         .grid-item-2 {
-            grid-row: span 4;
-        }  
+            grid-column: span 2;
+        }
 
-        .grid-item-3 {
+        .grid-item-4 {
             grid-row: span 2;
         }
 
-     
-        
+        .grid-item-6 {
+           grid-row: span 2;
+        }
+
+        .grid-item-11 {
+            grid-column: span 3;
+        }
+
+
+        .container {
+            position: absolute;
+            color: aliceblue;
+            width: 0%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            transition: 0.4s;
+            
+            overflow: hidden;
+
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+
+        @media only screen and (max-width: 600px) {
+
+            body {
+                background-color: blue;
+            }
+
+       .grid-container {
+           grid-template-columns: 100% !important;
+       }
+
+       .grid-item-1 {
+            grid-column: span 1;
+        }
+
+        .grid-item-2 {
+            grid-column: span 1;
+        }
+
+        .grid-item-4 {
+            grid-row: span 1;
+        }
+
+        .grid-item-6 {
+           grid-row: span 1;
+        }
+
+        .grid-item-11 {
+            grid-column: span 1;
+        }
+}
+        .title::after {
+            content: " ";
+           background-color: green;
+           width: 50px;
+           border-radius: 10px;
+           height: 5px;
+           display: block;
+        }
 
 
 
@@ -42,6 +109,13 @@
 </head>
 <body>
     
+    <button class="openBtn">
+        OPEN
+    </button>
+
+  <h1 class="title">Title</h1>
+  <h2>Subtitle</h2>
+   <p>Content ()=> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo labore reiciendis non qui minima quisquam modi error hic illum? Placeat totam voluptate aut quaerat distinctio! Rerum minima magni autem recusandae.</p>
 
     <div class="grid-container">
         <div class="grid-item grid-item-1">Grid Content 1 </div>
@@ -50,10 +124,40 @@
         <div class="grid-item grid-item-4">Grid Content 4</div>
         <div class="grid-item grid-item-5">Grid Content 5</div>
         <div class="grid-item grid-item-6">Grid Content 6</div>
-        <div class="grid-item grid-item-7">Grid Content 6</div>
-        <div class="grid-item grid-item-8">Grid Content 6</div>
-        <div class="grid-item grid-item-9">Grid Content 6</div>
+        <div class="grid-item grid-item-7">Grid Content 7</div>
+        <div class="grid-item grid-item-8">Grid Content 8</div>
+        <div class="grid-item grid-item-9">Grid Content 9</div>
+        <div class="grid-item grid-item-10">Grid Content 10</div>
+        <div class="grid-item grid-item-11">Grid Content 11</div>
         
     </div>
+
+    <div class="container">
+        <h1>Titulli</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugiat possimus delectus praesentium inventore obcaecati nobis sunt officia laborum sint. Necessitatibus nihil voluptatibus vitae accusantium dicta eveniet vel pariatur id.
+        Dignissimos numquam sapiente harum eveniet. Quisquam veniam, praesentium eaque, hic fugit debitis eligendi consequuntur ullam ut temporibus nisi? Temporibus voluptates animi quis asperiores dicta nam voluptatum accusamus? Aperiam, accusantium qui!
+        Deleniti voluptas, nesciunt, quod culpa cum non sapiente aliquam animi commodi dicta magni nisi, consectetur sint adipisci odio vitae quaerat repudiandae. Asperiores tempore fuga vero ab nihil sapiente magnam saepe!
+        Modi, ducimus dolorem! Tempore earum blanditiis obcaecati eligendi voluptate, vel vero quisquam dolor assumenda distinctio porro enim quam natus velit recusandae cupiditate saepe numquam quasi ipsam quos deserunt, quo vitae.
+        Quisquam quos incidunt dolor corrupti odit consequuntur nemo, exercitationem sit laboriosam recusandae error animi cupiditate fugiat ab earum adipisci nihil! Sed nam voluptatem nesciunt laboriosam inventore natus hic aperiam unde.</p>
+    
+       <button class="closeBtn">CLOSE </button>
+    </div>
+
+    <script>
+        
+      const openBtn = document.querySelector('.openBtn');
+      openBtn.addEventListener('click' , function () {
+ 
+
+        document.querySelector('.container').style.width = '40%';
+      });
+
+      const closeBtn = document.querySelector('.closeBtn');
+       closeBtn.addEventListener('click' , function () {
+        document.querySelector('.container').style.width = '0%';
+      });
+
+
+    </script>
 </body>
 </html>
