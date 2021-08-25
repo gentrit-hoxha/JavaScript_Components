@@ -21,8 +21,7 @@ function addTodo(event) {
   console.log("Button working");
 
   if (todoInput.value == "") {
-  
-      
+
   } 
   
   else {
