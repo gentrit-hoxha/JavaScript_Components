@@ -32,16 +32,15 @@ winner1.classList.add('hidden');
 
 let currentScore = 0;
 let activePlayer = 0;
-let scores = [0,0]
-
-
+let scores = [0,0];
 
 function switchPlayer() {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     currentScore = 0;
        if (activePlayer===0) {
         activePlayer=1
-       } else {
+       } 
+        else {
         activePlayer=0;
        }
 
@@ -49,9 +48,6 @@ function switchPlayer() {
    player1.classList.toggle('player--active');
     
 }
-
-
-
 
 function  rollTHeDice() {
    const diceNum = Math.ceil(Math.random()*6);
