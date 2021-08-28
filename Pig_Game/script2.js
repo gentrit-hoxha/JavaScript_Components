@@ -3,6 +3,35 @@
 /*This script is implemented after the script.js the original one
 so it is done 95% without looking the original code+*/
 
+function canIVote(age) {
+    let result = true;
+
+    if (age>=18) {
+        result = true;
+    } else {
+        result == false;
+
+    }
+
+    return result;
+}
+
+  function voteValidation(age) {
+      const check = canIVote(age);
+      let result;
+       
+      if (check === true) {
+          result = 'Yes you have the right to vote';
+        } else {
+            
+            result = 'SORRY you dont have the right to vote';
+      }
+
+      return result;
+  }
+
+     console.log(voteValidation(18));
+
 
 const score0El   = document.querySelector('#score--0');
 const score1El   = document.querySelector('#score--1');
