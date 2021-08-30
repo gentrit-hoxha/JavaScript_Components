@@ -4,7 +4,7 @@ var button = document.querySelector('.btn.check');
 var again  = document.querySelector('.btn.again');
 var input = document.querySelector('.guess');
 
-const secretNumber = Math.trunc(Math.random()*20 + 1);
+let secretNumber = Math.trunc(Math.random()*20 + 1);
 var score = 20;
 var highscore =  0;
 //const message = document.querySelector('.number').textContent = secretNumber;
@@ -101,6 +101,7 @@ function refreshPage1() {
     document.querySelector('.guess').style.backgroundColor = '#222';
     document.querySelector('.guess').value = "";
     document.querySelector('.message').textContent ='Start guessing .....';
+    secretNumber = Math.trunc(Math.random()*20 + 1);
 }
 
 button.addEventListener('click' , print);
