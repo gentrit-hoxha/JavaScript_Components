@@ -2,34 +2,7 @@
 
 /*This script is implemented after the script.js the original one
 so it is done 95% without looking the original code+*/
-
-function canIVote(age) {
-    let result = true;
-
-    if (age>=18) {
-        result = true;
-    } else {
-        result == false;
-
-    }
-
-    return result;
-}
-
-  function voteValidation(age) {
-      const check = canIVote(age);
-      let result;
-       
-      if (check === true) {
-          result = 'Yes you have the right to vote';
-        } else {
-            
-            result = 'SORRY you dont have the right to vote';
-      }
-
-      return result;
-  }
-
+     
      console.log(voteValidation(18));
 
 
@@ -48,12 +21,7 @@ const player1  = document.querySelector('.player--1');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-  
 
-
-btnRoll.addEventListener('click' , rollTHeDice);
-btnHold.addEventListener('click' , holdTHeScore);
-btnNew.addEventListener('click' , newGame);
 
 dice.classList.add('hidden');
 winner0.classList.add('hidden');
@@ -137,8 +105,14 @@ function holdTHeScore() {
     winner0.classList.add('hidden');
     winner1.classList.add('hidden');
 
+
+
      
 
 
     }
+
+    
+    
+
 
