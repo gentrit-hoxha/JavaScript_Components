@@ -13,6 +13,11 @@
               border: 1px solid black;
               font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
               padding: 2rem;
+
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
           }
 
           .surname {
@@ -24,6 +29,14 @@
               grid-template-columns: 50% 50%;
           }
 
+          .size {
+              margin-top: 2rem;
+              width: 350px;
+              height: 200px;
+          }
+
+
+
 
 
     </style>
@@ -32,7 +45,7 @@
     <h1>Testing jQuery</h1>
 
      <input type="text" value="gentrit" placeholder="Enter Your name"> 
-
+<img src="https://restcountries.eu/data/atg.svg" alt="" class="size">
 
     <ul>
         <li class="hot">Item 1</li>
@@ -43,14 +56,14 @@
 
    <div id="myData">
         
-         <div class="user">
-
-             <h1 class="name">Gentrit</h1>
-             <h1 class="surname">HOxha</h1>
-         </div>
+         
 
          
 
+   </div>
+
+   <div class="countries">
+      
    </div>
 
     <script src="jquery-1.js"></script>
