@@ -2,8 +2,6 @@
 
 /*This script is implemented after the script.js the original one
 so it is done 95% without looking the original code+*/
-     
-     console.log(voteValidation(18));
 
 
 const score0El   = document.querySelector('#score--0');
@@ -21,7 +19,12 @@ const player1  = document.querySelector('.player--1');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+  
 
+
+btnRoll.addEventListener('click' , rollTHeDice);
+btnHold.addEventListener('click' , holdTHeScore);
+btnNew.addEventListener('click' , newGame);
 
 dice.classList.add('hidden');
 winner0.classList.add('hidden');
@@ -29,15 +32,16 @@ winner1.classList.add('hidden');
 
 let currentScore = 0;
 let activePlayer = 0;
-let scores = [0,0];
+let scores = [0,0]
+
+
 
 function switchPlayer() {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     currentScore = 0;
        if (activePlayer===0) {
         activePlayer=1
-       } 
-        else {
+       } else {
         activePlayer=0;
        }
 
@@ -45,6 +49,9 @@ function switchPlayer() {
    player1.classList.toggle('player--active');
     
 }
+
+
+
 
 function  rollTHeDice() {
    const diceNum = Math.ceil(Math.random()*6);
@@ -105,14 +112,8 @@ function holdTHeScore() {
     winner0.classList.add('hidden');
     winner1.classList.add('hidden');
 
-
-
      
 
 
     }
-
-    
-    
-
 
