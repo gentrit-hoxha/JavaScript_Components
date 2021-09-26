@@ -1,0 +1,23 @@
+{
+  "name": "JavaScript_Components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gentrit-hoxha/JavaScript_Components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gentrit-hoxha/JavaScript_Components/issues"
+  },
+  "homepage": "https://github.com/gentrit-hoxha/JavaScript_Components#readme",
+  "devDependencies": {
+    "jest": "^27.2.1"
+  }
+}
